@@ -1,0 +1,73 @@
+@import 'pattern.scss';
+
+.landing-page {
+      width: 100%;
+      height: 100vh;
+      background: #000000;
+      position: relative;
+      overflow: hidden;
+      .landing-page::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            
+            background-size: cover;
+            opacity: 0.3;
+            animation: anim 25s linear infinite;
+      }
+      @keyframes anim {
+            50% {
+                  transform: scale(2);
+            }
+            100% {
+                  transform: scale(1);
+            }
+      }
+      .page-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            padding: 0 40px;
+            box-sizing: border-box;
+            h1{
+            color: #FF7979;
+            text-transform: uppercase;
+            font-size: 50px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            }
+            p {
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            }
+            a {
+            display: inline-block;
+            text-decoration: none;
+            color: #FF7979;
+            border: 2px solid #FF7979;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            transition: 0.4s linear;
+            }
+            a:hover {
+            color: #FFFFFF;
+            background: #FF7979;
+            }
+            }
+      .text {
+            padding: 10px;
+            text-align: justify;
+            div {
+                  margin-bottom: 6px;
+            }
+      }      
+}
+
